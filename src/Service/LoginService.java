@@ -28,6 +28,8 @@ public class LoginService implements ServiceInterface {
 
     boolean b = new MemberDAO().login(dto);
     
+    //System.out.println("init");
+    
     if(b){ //로그인 성공했을때
       System.out.println("로그인 성공");
       HttpSession session = request.getSession();

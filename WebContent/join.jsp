@@ -120,15 +120,6 @@
 									</div>
 								</div>
 
-								<div class="form-group">
-									<label for="confirm" class="cols-sm-2 control-label">Confirm
-										Password</label>
-									<div class="cols-sm-10">
-										<input type="password" class="form-control" name="confirm"
-											id="confirm" placeholder="Confirm your Password" />
-
-									</div>
-								</div>
 
 								<div class="form-group">
 									<label for="email" class="cols-sm-2 control-label">Nickname</label>
