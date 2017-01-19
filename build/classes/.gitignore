@@ -1,7 +1,6 @@
 /Controller/
-/DAO/
-/DBManager/
-/DTO/
-/Interface/
-/Model/
 /Service/
+/DAO/
+/DTO/
+/DBManager/
+/Interface/

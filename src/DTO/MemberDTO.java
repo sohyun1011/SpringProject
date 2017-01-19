@@ -3,7 +3,7 @@ package DTO;
 public class MemberDTO {
 
 	private String id; // 아이디
-	private String pw; // 패스워드
+	private String pwd; // 패스워드
 	private String nname; // 닉넴
 	private String name; // 이름
 	private int age; // 나이
@@ -17,12 +17,12 @@ public class MemberDTO {
 		this.id = id;
 	}
 
-	public String getPw() {
-		return pw;
+	public String getPwd() {
+		return pwd;
 	}
 
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
 
 	public String getNname() {

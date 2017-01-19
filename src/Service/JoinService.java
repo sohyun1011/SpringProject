@@ -9,7 +9,7 @@ import DTO.MemberDTO;
 import Interface.ServiceForward;
 import Interface.ServiceInterface;
 
-public class LoginService implements ServiceInterface {
+public class JoinService implements ServiceInterface {
 
   @Override
   public ServiceForward excute(HttpServletRequest request, HttpServletResponse response) {
@@ -17,26 +17,32 @@ public class LoginService implements ServiceInterface {
     ServiceForward forward = new ServiceForward();
     forward.setRedirect(true);
     forward.setPath("./index.jsp");
-
+    
     String id = request.getParameter("id");
     String pwd = request.getParameter("pwd");
-
-    System.out.println(id + pwd);
+    String nname = request.getParameter("nname");
+    String name = request.getParameter("name");
+    int age = Integer.parseInt(request.getParameter("age"));
+    String gender = request.getParameter("gender");
+    
     MemberDTO dto = new MemberDTO();
     dto.setId(id);
     dto.setPwd(pwd);
+    dto.setNname(nname);
+    dto.setName(name);
+    dto.setAge(age);
+    dto.setGender(gender);
 
-    boolean b = new MemberDAO().login(dto);
     
-    if(b){ //로그인 성공했을때
-      System.out.println("로그인 성공");
-      HttpSession session = request.getSession();
-      session.setAttribute("Member",dto);
+    boolean b = new MemberDAO().join(dto);
+    
+    if(b){ //회원가입 성공했을때
+      System.out.println("회원가입 성공");
     }else{
-      System.out.println("로그인 실패");
+      System.out.println("회원가입 실패");
     }
-
     return forward;
   }
+  
 
 }

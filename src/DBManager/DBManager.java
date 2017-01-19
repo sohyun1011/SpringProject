@@ -24,7 +24,7 @@ public class DBManager {
 		{
 			
 			init = new InitialContext();
-			ds = (DataSource) init.lookup("java:comp/env/jdbc/cosmetic");
+			ds = (DataSource) init.lookup("java:comp/env/jdbc/project");
 			
 		} 
 		

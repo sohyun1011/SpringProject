@@ -50,7 +50,8 @@
 		alert(id + "님 회원가입을 축하드립니다.");
 	}
 </script>
-</head>`
+</head>
+`
 
 <body>
 
@@ -83,7 +84,7 @@
 	</div>
 	</nav>
 
-	<form name="f" onsubmit="return a()">
+	<form name="f" onsubmit="return a()" action="Member.service?cmd=Join" method="POST">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
@@ -98,80 +99,81 @@
 											<strong>Join</strong>
 										</h2>
 										<hr>
-
 									</div>
-									<div>
-										<label for="name" class="cols-sm-2 control-label">Id</label>
-										<div class="cols-sm-10">
-											<input type="text" class="form-control" name="id" id="id"
-												placeholder="Enter your Id" />
-
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="password" class="cols-sm-2 control-label">Password</label>
-										<div class="cols-sm-10">
-											<input type="password" class="form-control" name="pwd"
-												id="pwd" placeholder="Enter your Password" />
-
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="confirm" class="cols-sm-2 control-label">Confirm
-											Password</label>
-										<div class="cols-sm-10">
-											<input type="password" class="form-control" name="confirm"
-												id="confirm" placeholder="Confirm your Password" />
-
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="email" class="cols-sm-2 control-label">Nickname</label>
-										<div class="cols-sm-10">
-											<input type="text" class="form-control" name="nname"
-												id="nname" placeholder="Enter your nickname" />
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="username" class="cols-sm-2 control-label">Username</label>
-										<div class="cols-sm-10">
-											<input type="text" class="form-control" name="name" id="name"
-												placeholder="Enter your name" />
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="username" class="cols-sm-2 control-label">Age</label>
-										<div class="cols-sm-10">
-											<input type="text" class="form-control" name="age" id="age"
-												placeholder="Enter your age" />
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label for="username" class="cols-sm-2 control-label">Gender</label>
-										<div class="cols-sm-10">
-											<input type="radio" name="gender" value="f" />female <input
-												type="radio" name="gender" value="m" />male
-										</div>
-									</div>
-
-									<div class="form-group ">
-										<button type="submit"
-											class="btn btn-primary btn-lg btn-block login-button">Join</button>
-									</div>
-
-
+									
 								</div>
+								<div>
+									<label for="name" class="cols-sm-2 control-label">Id</label>
+									<div class="cols-sm-10">
+										<input type="text" class="form-control" name="id" id="id"
+											placeholder="Enter your Id" />
+
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="password" class="cols-sm-2 control-label">Password</label>
+									<div class="cols-sm-10">
+										<input type="password" class="form-control" name="pwd"
+											id="pwd" placeholder="Enter your Password" />
+
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="confirm" class="cols-sm-2 control-label">Confirm
+										Password</label>
+									<div class="cols-sm-10">
+										<input type="password" class="form-control" name="confirm"
+											id="confirm" placeholder="Confirm your Password" />
+
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="email" class="cols-sm-2 control-label">Nickname</label>
+									<div class="cols-sm-10">
+										<input type="text" class="form-control" name="nname"
+											id="nname" placeholder="Enter your nickname" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="username" class="cols-sm-2 control-label">Username</label>
+									<div class="cols-sm-10">
+										<input type="text" class="form-control" name="name" id="name"
+											placeholder="Enter your name" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="username" class="cols-sm-2 control-label">Age</label>
+									<div class="cols-sm-10">
+										<input type="text" class="form-control" name="age" id="age"
+											placeholder="Enter your age" />
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="username" class="cols-sm-2 control-label">Gender</label>
+									<div class="cols-sm-10">
+										<input type="radio" name="gender" value="f" />female <input
+											type="radio" name="gender" value="m" />male
+									</div>
+								</div>
+
+								<div class="form-group ">
+									<button type="submit"
+										class="btn btn-primary btn-lg btn-block login-button">Join</button>
+								</div>
+
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</form>
 	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
