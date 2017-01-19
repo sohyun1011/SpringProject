@@ -3,6 +3,6 @@
    <!-- DBCP를 위한 DB연결설정 -->
    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver"
       maxIdle="100" maxTotal="300" maxWaitMillis="5000" name="jdbc/project"
-      password="1234" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/project"
-      username="project" />
+      password="root" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/project"
+      username="root" />
 </Context>

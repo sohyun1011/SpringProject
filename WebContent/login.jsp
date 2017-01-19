@@ -98,10 +98,6 @@
 										</h2>
 										<hr>
 										</br>
-										<c:if test="${not empty sessionScope.Member}">
-											<div class="navbar-brand">${sessionScope.Member.id} ´Ô</div>
-											<a class="navbar-brand" href="Member.service?cmd=logout">·Î±×¾Æ¿ô</a>
-										</c:if>
 
 										<div class="col-xs-6">
 											<a href="#" class="active" id="login-form-link">Login</a>
