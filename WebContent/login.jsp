@@ -33,22 +33,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script>
-function a(){
-	if(document.f.id.value==""){
-		alert("아이디를 입력하세요.")
-		return false;
+	function a() {
+		if (document.f.id.value == "") {
+			alert("아이디를 입력하세요.")
+			return false;
+		}
+		if (document.f.pwd.value == "") {
+			alert("패스워드를 입력하세요.");
+			return false;
+		}
+		b();
+		return true;
 	}
-	if(document.f.pwd.value==""){
-		alert("패스워드를 입력하세요.");
-		return false;
+	function b() {
+		alert("로그인")
 	}
-	b();
-	return true;
-}
-function b(){
-	alert("로그인")
-}
-
 </script>
 </head>
 
@@ -74,7 +73,7 @@ function b(){
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-			<li><a href="index.jsp">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li><a href="board.jsp">board</a></li>
 				<li><a href="qna.jsp">Q&A</a></li>
 				<li><a href="login.jsp">Login</a></li>
@@ -82,60 +81,62 @@ function b(){
 		</div>
 	</div>
 	</nav>
-<form name="f" onsubmit="return a()">
-	<div class="container">
+	<form name="f" onsubmit="return a()">
+		<div class="container">
 
-		<div class="row">
+			<div class="row">
 
-			<div class="col-lg-12">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="panel panel-login">
-							<div class="panel-heading">
-								<div class="row">
-									<hr>
-									<h2 class="intro-text text-center">
-										<strong>LOGIN</strong>
-									</h2>
-									<hr>
-									</br>
-									<div class="col-xs-6">
-										<a href="#" class="active" id="login-form-link">Login</a>
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="panel panel-login">
+								<div class="panel-heading">
+									<div class="row">
+										<hr>
+										<h2 class="intro-text text-center">
+											<strong>LOGIN</strong>
+										</h2>
+										<hr>
+										</br>
+										<div class="col-xs-6">
+											<a href="#" class="active" id="login-form-link">Login</a>
+										</div>
+										<div class="col-xs-6">
+											<a href="join.jsp">Join</a>
+										</div>
 									</div>
-									<div class="col-xs-6">
-										<a href="join.jsp">Join</a>
-									</div>
+									<hr>
 								</div>
-								<hr>
-							</div>
-							<div class="panel-body">
-								<div class="row">
-									<div class="col-lg-12">
-										<form id="login-form" action="http://phpoll.com/login/process"
-											method="post" role="form" style="display: block;">
-											<div class="form-group">
-												<input type="text" name="id" id="id" tabindex="1"
-													class="form-control" placeholder="UserId" value="">
-											</div>
-											<div class="form-group">
-												<input type="password" name="pwd" id="pwd" tabindex="2"
-													class="form-control" placeholder="Password">
-											</div>
-											<div class="form-group text-center">
-												<input type="checkbox" tabindex="3" class="" name="remember"
-													id="remember"> <label for="remember">
-													Remember Me</label>
-											</div>
-											<div class="form-group">
-												<div class="row">
-													<div class="col-sm-6 col-sm-offset-3">
-														<input type="submit" name="login-submit" id="login-submit"
-															tabindex="4" class="form-control btn btn-login"
-															value="Log In">
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-lg-12">
+											<form id="login-form"
+												action="http://phpoll.com/login/process" method="post"
+												role="form" style="display: block;">
+												<div class="form-group">
+													<input type="text" name="id" id="id" tabindex="1"
+														class="form-control" placeholder="UserId" value="">
+												</div>
+												<div class="form-group">
+													<input type="password" name="pwd" id="pwd" tabindex="2"
+														class="form-control" placeholder="Password">
+												</div>
+												<div class="form-group text-center">
+													<input type="checkbox" tabindex="3" class=""
+														name="remember" id="remember"> <label
+														for="remember"> Remember Me</label>
+												</div>
+												<div class="form-group">
+													<div class="row">
+														<div class="col-sm-6 col-sm-offset-3">
+															<input type="submit" name="login-submit"
+																id="login-submit" tabindex="4"
+																class="form-control btn btn-login" value="Log In">
+														</div>
 													</div>
 												</div>
-											</div>
-										</form>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -144,9 +145,8 @@ function b(){
 				</div>
 			</div>
 		</div>
-	</div>
 
-</form>
+	</form>
 	<script src="js/jquery.js"></script>
 	<script src="js/login-word.js"></script>
 </body>
